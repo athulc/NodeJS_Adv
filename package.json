@@ -1,0 +1,23 @@
+{
+  "name": "projects",
+  "version": "1.0.0",
+  "description": "A sample project.",
+  "main": "13Thapa-NPM.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/athulc/NodeJS_Adv.git"
+  },
+  "author": "Athul",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/athulc/NodeJS_Adv/issues"
+  },
+  "homepage": "https://github.com/athulc/NodeJS_Adv#readme",
+  "dependencies": {
+    "chalk": "^4.1.2",
+    "validator": "^13.6.0"
+  }
+}
