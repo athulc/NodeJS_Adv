@@ -1,10 +1,16 @@
 const http = require("http");
+const fs = require("fs");
 
 const server = http.createServer((req, res) => {
+  const data = fs.readFileSync("jsonNew.json", "utf-8");
+
   if (req.url == "/") {
     res.end("Home");
   } else if (req.url == "/1") {
     res.end("Done!");
+  } else if (req.url == "/api") {
+    res.writeHead(200, { "Content-Type": "application/json" });
+    res.end(data);
   } else {
     //1st method
 
