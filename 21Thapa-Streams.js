@@ -12,7 +12,7 @@ server.on("request", (req, res) => {
   //   });
 
   //2nd way
-  const rstream = fs.createReadStream("json.txt2");
+  const rstream = fs.createReadStream("json.txt");
 
   rstream.on("data", (chunk) => {
     res.write(chunk);
@@ -27,6 +27,10 @@ server.on("request", (req, res) => {
     res.write("End Streaming...");
     res.end();
   });
+
+  //3rd way
+  const rstream = fs.createReadStream("json.txt");
+  rstream.pipe(res);
 });
 
 server.listen(8000, "127.0.0.1", () => console.log("Server On!"));
